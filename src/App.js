@@ -1,21 +1,19 @@
 import React from 'react';
-import Display from './Display.js';
-import InputPanel from './InputPanel.js';
+import Display from './components/Display.js';
+import InputPanel from './components/InputPanel.js';
+import './App.css';
 
-class App extends React.Component() {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: null,
-      input: null,
-      operator: null
-    };
-  }
+class App extends React.Component {
+  state = {
+    currentDisplay: 0,
+    total: null,
+    operator: null
+  };
 
   render() {
     return (
-      <div class="calc-app">
-        <Display />
+      <div className="calc-app">
+        <Display currentDisplay={this.state.currentDisplay} />
         <InputPanel />
       </div>
     );

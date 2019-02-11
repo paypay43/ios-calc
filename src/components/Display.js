@@ -4,13 +4,10 @@ import './Display.css';
 class Display extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      displayValue: 0
-    };
   }
 
   render() {
-    return <div>this.state.displayValue</div>;
+    return <div className="calc-display">{this.props.currentDisplay}</div>;
   }
 }
 
